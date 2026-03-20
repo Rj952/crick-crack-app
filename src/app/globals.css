@@ -2,40 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700;800&display=swap');
-
 @layer base {
-  body {
-    @apply font-nunito text-brand-night;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-fredoka font-bold;
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-brand-ocean text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 bg-amber-500 text-white font-bold
+           px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105
+           active:scale-95 transition-all duration-200;
   }
-  
   .btn-secondary {
-    @apply px-6 py-3 bg-brand-coral text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 bg-white text-teal-700 font-bold
+           px-6 py-3 rounded-2xl shadow-md hover:shadow-lg hover:scale-105
+           active:scale-95 transition-all duration-200 border-2 border-teal-200;
   }
-  
-  .card-interactive {
-    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 p-6;
-  }
-  
-  .gradient-beach {
-    @apply bg-gradient-to-br from-brand-sun via-brand-sand to-brand-ocean;
-  }
-  
-  .gradient-tropical {
-    @apply bg-gradient-to-br from-brand-palm to-brand-ocean;
-  }
-}
-
-::selection {
-  @apply bg-brand-coral text-white;
 }
