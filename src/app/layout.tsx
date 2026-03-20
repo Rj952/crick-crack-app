@@ -1,27 +1,15 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Crick Crack - Caribbean Literacy App',
-  description: 'Interactive stories, phonics games, and adaptive learning for Caribbean learners',
+  title: "Crick Crack — Caribbean Literacy Adventure",
+  description: "A world-class literacy app celebrating Caribbean culture through interactive stories, phonics games, and adaptive learning for all ages.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-brand-sand">
-        <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
-      </body>
+      <body className="min-h-screen bg-brand-sand font-body text-brand-night">{children}</body>
     </html>
   );
 }
