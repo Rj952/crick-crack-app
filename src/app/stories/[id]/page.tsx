@@ -116,7 +116,7 @@ const stories = {
         text: 'In the deep forests and hidden valleys of St. Lucia, there lived a creature called a Soucouyant, a being who sheds her skin at night and flies through the darkness as a ball of fire.\nFor many years, the Soucouyant had hunted the villagers, taking their strength and their peace. People locked their doors and never went out after sunset. They lived in fear.\nBut no one knew that inside the Soucouyants heart, there was a longing. She had not always been this monster. Once, she had been human, with family and love.'
       },
       {
-        number: 2,
+        number: 2
         title: 'The Childs Kindness',
         text: 'One evening, a young girl named Aiko was gathering herbs in the forest for her grandmother when the Soucouyant came near. The girl had nowhere to run.\nThe Soucouyant moved closer, her eyes glowing like embers. But something stopped her. It was not the girls fear, it was the girls tears.\nPlease, said the girl. I must get these herbs to my grandmother. She is dying. When I am done, you can do what you wish with me.\nThe Soucouyant had not heard such kindness in so long that she froze. Something inside her stirred, a memory of being human, of caring for someone else.'
       },
@@ -139,8 +139,8 @@ const stories = {
   }
 };
 
-export default function StoryPage() {
-  const params = useParams();
+const storyId = params.id as string;
+  const params = usePara as stringmsstoryId = params.id();
   const storyId = params.id;
   const story = stories[storyId];
   const [currentPage, setCurrentPage] = useState(0);
